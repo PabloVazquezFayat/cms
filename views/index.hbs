@@ -1,0 +1,29 @@
+<div id="page-wapper">
+
+    {{#each page.components}}
+
+        {{#each this.externalCSSfiles}}
+            <link rel="stylesheet" href={{this}}>
+        {{/each}}
+
+        {{#each this.externalJSfiles}}
+            <script src={{this}}></script>
+        {{/each}}
+
+        {{#if this.script}}
+            {{{ this.script }}}
+        {{/if}}
+
+        {{#if this.css}}
+            {{{ this.css }}}
+        {{/if}}
+
+        {{#if this.html}}
+            {{{ this.html }}}
+        {{/if}}
+
+    {{/each}}
+
+</div>
+
+
