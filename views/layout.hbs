@@ -2,7 +2,9 @@
 <html>
   <head>
     <title>{{page.title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    {{#each page.externalFiles}}
+      {{{this}}}
+    {{/each}}
   </head>
   <body>
     {{{body}}}

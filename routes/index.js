@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const pageRead = require('../controllers/page/page-read.js');
+const index = require('../controllers/index');
 
 /* GET home page. */
-router.get('/:id', pageRead);
+router.get('/:id', index);
 
 module.exports = router;

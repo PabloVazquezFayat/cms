@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const componentRead = require('../controllers/component/component-read');
 const componentCreate = require('../controllers/component/component-create');
+const componentRead = require('../controllers/component/component-read');
+const componentUpdate = require('../controllers/component/component-update');
 
 router.get('/component/read/:id', componentRead);
 
@@ -9,7 +10,7 @@ router.get('/component/read/:id', componentRead);
 
 router.post('/component/create', componentCreate);
 
-// router.put('/', componentUpdate);
+router.put('/component/update', componentUpdate);
 
 // router.delete('/', componentDelete);
 

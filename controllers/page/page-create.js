@@ -6,6 +6,7 @@ module.exports = async (req, res, next)=>{
 
         const newPageData = {
             name: req.body.name,
+            externalFiles: req.body.externalFiles,
             title: req.body.title,
             components: req.body.components,
         }

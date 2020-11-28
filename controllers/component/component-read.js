@@ -4,7 +4,7 @@ module.exports = async (req, res, next)=>{
 
     try{
 
-        const component = await Component.findOne({id: req.params.id});
+        const component = await Component.findOne({_id: req.params.id});
 
         if(component){
             res.status(200).json(component);
